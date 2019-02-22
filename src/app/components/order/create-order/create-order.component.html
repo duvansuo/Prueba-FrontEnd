@@ -1,3 +1,56 @@
-<p>
-  create-order works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Notificaciones</h3>
+      </div>
+      <form role="form" [formGroup]="orderForm" (ngSubmit)="CreateOrder()">
+        <div class="box-body">
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="cedula">Cedula</label>
+              <input type="text" class="form-control" id="cedula" placeholder="Cedula" autocomplete="off"
+                formControlName="cedula">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre" autocomplete="off"
+                formControlName="nombre">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="celular">Celular</label>
+              <input type="text" class="form-control" id="celular" placeholder="Celular" autocomplete="off"
+                formControlName="celular">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="direccionReception">Direccion Recepcion</label>
+              <input type="text" class="form-control" id="direccionReception" placeholder="Direccion recepcion"
+                autocomplete="off" formControlName="direccionReception">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="direccionEnvio">Direccion Envio</label>
+              <input type="text" class="form-control" id="direccionEnvio" placeholder="Direccion envio" autocomplete="off"
+                formControlName="direccionEnvio">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="ciudadRecepcion">Ciudad Recepcion</label>
+              <input type="text" class="form-control" id="ciudadRecepcion" placeholder="Ciudad recepcion" autocomplete="off"
+                formControlName="ciudadRecepcion">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="ciudadEnvio">Ciudad Envio</label>
+              <input type="text" class="form-control" id="ciudadEnvio" placeholder="Ciudad envio" autocomplete="off"
+                formControlName="ciudadEnvio">
+            </div>
+          </div>
+
+        </div>
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
