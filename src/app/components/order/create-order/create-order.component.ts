@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { OrdersService } from 'src/app/services/orders.service';
 
 @Component({
   selector: 'app-create-order',
@@ -10,7 +11,7 @@ export class CreateOrderComponent implements OnInit {
 
   orderForm: FormGroup;
   orderModel: any = {};
-  constructor() { }
+  constructor(private _ordersService: OrdersService) { }
 
   ngOnInit() {
     this.initializateForm();
@@ -34,7 +35,12 @@ export class CreateOrderComponent implements OnInit {
       return;
     }
     this.getData();
-    console.log(this.orderModel);
+    this._ordersService.createOrder(this.orderModel)
+      .subscribe((data) => {
+        console.log('Registro exitoso')
+      }, (error) => {
+        console.log(error)
+      })
   }
 
   private getData() {
