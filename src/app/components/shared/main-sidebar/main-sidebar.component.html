@@ -1,3 +1,22 @@
-<p>
-  main-sidebar works!
-</p>
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header">MAIN NAVIGATION</li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-fire"></i> <span>Pedidos</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="active"><a [routerLink]="['/recipe']"><i class="fa fa-circle-o"></i> Crear</a></li>
+          <li><a [routerLink]="['/recipes']"><i class="fa fa-circle-o"></i> Listar</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>
